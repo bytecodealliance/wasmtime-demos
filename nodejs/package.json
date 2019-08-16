@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "wasm-interface-types": "^0.1.1"
+  }
+}
