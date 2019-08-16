@@ -22,3 +22,17 @@ And finally, execute the Python script!
 ```
 $ python3 run.py
 ```
+
+## How does it work?
+
+All the magic here happens in the `wasmtime` Python extension. This python
+extension [lives in the wasmtime
+repository](https://github.com/cranestation/wasmtime) and is sort of like a
+compiled version of the `wasmtime` executable, only tailored for Python. The
+`wasmtime` Python extension uses Python's `importlib` library to inject support
+to load a WebAssembly module as a Python file.
+
+The Python extension then has all the necessary support to connect the various
+dots to ensure that the WebAssembly interface types used by the wasm module are
+connected to Python's own native types, and you can call the functions just as
+if they were normal Python functions.

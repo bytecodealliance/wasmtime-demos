@@ -24,16 +24,17 @@ recommended to use Node.js 12+ here as well
 $ node --experimental-modules --loader ./loader.mjs ./run.mjs
 ```
 
+## How does it work?
+
 Here the `--experimental-modules` and `--loader` flags are combined to enable us
 to provide a custom loader for wasm files which contain interface types. The
 `loader.mjs` file uses the dependencies installed by `npm install` to provide a
 polyfill for WebAssembly interface types that runs natively in Node.js today.
 
-Once the environment is set up though the `run.mjs` file looks as you might
-expect:
-
-```js
-import { render } from './markdown.wasm';
-
-console.log(render("# Hello, node!"));
-```
+The dependency that we're using here is
+[`wasm-interface-types`](https://www.npmjs.com/package/wasm-interface-types)
+which is a version of [`wasm-bindgen`](https://github.com/rustwasm/wasm-bindgen)
+compiled to WebAssembly. This allows us to hook into imports performed by
+Node.js and whenever a wasm file with WebAssembly interface types is imported we
+execute `wasm-bindgen` at that time, producing a module that is compatible with
+what Node.js supports today and can execute in today's environment.
