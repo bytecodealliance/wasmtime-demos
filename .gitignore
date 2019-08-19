@@ -3,3 +3,4 @@ pkg
 *.wasm
 package-lock.json
 node_modules
+Cargo.lock
