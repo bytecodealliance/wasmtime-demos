@@ -7,7 +7,7 @@
     "start": "rimraf dist pkg && webpack-dev-server --open -d"
   },
   "devDependencies": {
-    "wasm-interface-types-loader": "^0.1.1",
+    "wasm-interface-types-loader": "^0.1.2",
     "copy-webpack-plugin": "^5.0.3",
     "webpack": "^4.33.0",
     "webpack-cli": "^3.3.3",
