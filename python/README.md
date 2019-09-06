@@ -1,4 +1,4 @@
-# Executing WebAssembly files with interface types in Node.js
+# Executing WebAssembly files with interface types in Python
 
 This directory shows how a raw WebAssembly file with a custom interface types
 section can be executed natively in Python. Python does not today support the
