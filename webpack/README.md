@@ -22,7 +22,7 @@ $ npm install
 And finally we'll want to start up a webpack development server:
 
 ```
-$ npm run start
+$ npm start
 ```
 
 After this you can visit http://localhost:8080 and you should see an interactive
