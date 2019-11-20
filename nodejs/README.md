@@ -17,12 +17,15 @@ Next you'll want to install necessary dependencies:
 $ npm install
 ```
 
-Next you'll need to be sure to execute `node` with experimental flags. It's
-recommended to use Node.js 12+ here as well
+Next you'll need to be sure to execute `node` with experimental flags. It
+requires Node.js 13+ here as well
 
 ```
-$ node --experimental-modules --loader ./loader.mjs ./run.mjs
+$ node --experimental-wasm-mv --experimental-modules --loader ./loader.mjs ./run.mjs
 ```
+
+Note that Node.js 13 with the `--experimental-wasm-mv` flag is required to
+enable the multi-value support needed by the polyfill.
 
 ## How does it work?
 
