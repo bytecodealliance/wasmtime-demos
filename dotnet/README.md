@@ -4,6 +4,8 @@ This directory shows how a WebAssembly module can be executed by a [.NET Core](h
 
 While the Wasmtime for .NET API does not yet support the interface types proposal, this demonstrates how the [markdown WebAssembly module](https://github.com/bytecodealliance/wasmtime-demos/tree/master/markdown) can still be used from .NET.
 
+When the Wasmtime for .NET API supports configuring Wasmtime's WASI implementation and WebAssembly interface types, this demo will be greatly simplified so that the glue code in `Allocator.cs` and `Host.cs` will no longer be necessary.
+
 ## Installing a .NET Core SDK
 
 Install a [.NET Core SDK](https://dotnet.microsoft.com/download) (version 3.0 or later) to build this project.
