@@ -6,4 +6,4 @@ edition = "2018"
 
 [dependencies]
 wasmtime-rust = { git = 'https://github.com/cranestation/wasmtime' }
-failure = "0.1"
+anyhow = "1"
